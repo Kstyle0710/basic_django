@@ -11,3 +11,10 @@ def index(request):
         {'data' : data}
     )
 
+def download(request, pk):
+    single = ImageBox.objects.get(pk=pk)
+    return render(
+        request,
+        'myapp_01/download.html',
+        {'single' : single}
+    )
