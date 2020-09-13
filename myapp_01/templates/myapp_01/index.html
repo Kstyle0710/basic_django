@@ -14,6 +14,13 @@
     <p>id : {{sample.pk}}</p>
     <p>description : {{sample.description}}</p>
     <p>uploadfile : <a href="{{sample.upload_file.url}}/">첨부 파일</a></p>
+    
+
+    <video id="video1" width="400" height="300" controls>
+        <source src="{{sample.upload_file.url}}/" type="video/mp4">
+
+      Your browser does not support the video tag.
+      </video>
 
     <p>created date : {{sample.created}}</p>
     <p>updated date : {{sample.updated}}</p>
