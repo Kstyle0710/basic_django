@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h3>sub data</h3>
+
+{%for desc in smalldata %}
+<h3>
+    <p>title : {{desc.title}}</p>
+    <p>id : {{desc.pk}}</p>
+    <p>FK : {{desc.bigone}}</p>
+    <p>description : {{desc.description}}</p>
+<h5>----------------------------------------------------</h5>
+</h3>
+{% endfor %}
+
+
+
+<script src="{% static 'myapp_01/jquery.min.js' %}"></script>
+<script src="{% static 'myapp_01/popper.min.js' %}"></script>
+<script src="{% static 'myapp_01/bootstrap.min.js' %}"></script>
+<script src="{% static 'myapp_01/custom.js' %}"></script>
+
+</body>
+</html>

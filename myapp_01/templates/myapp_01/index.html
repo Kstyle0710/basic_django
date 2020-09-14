@@ -6,32 +6,36 @@
     <title>Title</title>
 </head>
 <body>
+
 <h1>Hello World</h1>
 <hr>
-{%for sample in data %}
+{%for sample in bigdata %}
 <h3>
     <p>title : {{sample.title}}</p>
     <p>id : {{sample.pk}}</p>
     <p>description : {{sample.description}}</p>
     <p>uploadfile : <a href="{{sample.upload_file.url}}/">첨부 파일</a></p>
-    
+    <p>{{sample.upload_file.url}}</p>
+<!--    <video id="video1" width="400" height="300" controls>-->
+<!--        <source src="{{sample.upload_file.url}}/" type="video/mp4">-->
 
-    <video id="video1" width="400" height="300" controls>
-        <source src="{{sample.upload_file.url}}/" type="video/mp4">
-
-      Your browser does not support the video tag.
-      </video>
+<!--      Your browser does not support the video tag.-->
+<!--      </video>-->
 
     <p>created date : {{sample.created}}</p>
     <p>updated date : {{sample.updated}}</p>
     <p>author : {{sample.author}}</p>
 </h3>
 
-{{sample.image_1.url}}<br/>
+{{sample.image.url}}<br/>
 
-<img width="500px" src="{{sample.image_1.url}}"/><br/>
+<img width="500px" src="{{sample.image.url}}"/><br/>
 <hr>
+
 {% endfor %}
+
+
+
 
 <script src="{% static 'myapp_01/jquery.min.js' %}"></script>
 <script src="{% static 'myapp_01/popper.min.js' %}"></script>
